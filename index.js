@@ -19,10 +19,16 @@ let randomNum = Math.ceil(Math.random() * 100);
 
 //TODO 2: COMPLETED. The player inputs their guess in a text input field.
     //Accept user input as keyboard event for the guess. This may be an addEventListener to capture the data entered.
+ //TODO 3. The player clicks a button to submit their guess. 
     //add event listener {}
 
 submitAnswer.addEventListener("click", function(){
     userInput = textBar.value;
+    compare(userInput)
+    if (userInput.length >5) {
+        console.log ("Game Over")
+    }
+    
 })
 
 //Create a function to measure the difference between the user stated value and the randomNum.  Uses conditional logic to return if higher or lower than the randomNum.
@@ -37,11 +43,10 @@ function compare (userInput) {
         }
     }
 
-//TODO 3. The player clicks a button to submit their guess.
-
-
-
 //TODO 4. Write one larger function that captures each guess and log the number of entries.  Limit the number of entries to five.  After five guesses return a you loose statement. 
+
+
+
 
 
 // }
